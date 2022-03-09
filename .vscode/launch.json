@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BookserviceApplication<bookservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.whitecastle.bookservice.BookserviceApplication",
+            "projectName": "bookservice",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-LinkserviceApplication<linkservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.whitecastle.linkservice.LinkserviceApplication",
+            "projectName": "linkservice",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-NamingserverApplication<namingserver>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.whitecastle.namingserver.NamingserverApplication",
+            "projectName": "namingserver",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApigatewayApplication<apigateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.whitecastle.apigateway.ApigatewayApplication",
+            "projectName": "apigateway",
+            "args": ""
+        }
+    ]
+}
