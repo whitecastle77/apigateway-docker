@@ -32,7 +32,7 @@ Implementar um ambiente de microsserviços que possua as seguintes característi
 - JPA/Hibernate
 - MySql DB 8 + Workbench
 - Resilience4j (Circuit Breaker, resilient and fault-tolerant applications)
-- RabbitMQ (Zipkin fault-tolerant)
+- RabbitMQ (Service Broker - Zipkin fault-tolerant)
 - Docker + Docker Compose
 
 ## Configuração do ambiente
