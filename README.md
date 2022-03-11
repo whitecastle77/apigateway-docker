@@ -7,7 +7,7 @@ Implementar um ambiente de microsserviços que possua as seguintes característi
 - Consigamos monitorar a performance dos microsserviços
 - Documentação automatizada das APIs desenvolvidas
 - Tolerancia a falhas
-- Solução dockerizada rodando via docker compose
+- Solução containerizada rodando via docker compose
 
 ![API Gateway Desenho](https://user-images.githubusercontent.com/87205235/157774157-5c927076-4228-45f3-8bfd-768f72b27763.jpg)
 
@@ -55,14 +55,14 @@ Implementar um ambiente de microsserviços que possua as seguintes característi
 - 08 Linkservice (http://localhost:8100/actuator)
 - 09 API Gateway (http://localhost:8700/actuator)
 ### 09.1 Execução do Linkservice através do Gateway
-- get http://localhost:8700/linkservice/photos
-- get http://localhost:8700/linkservice/photos/{id}
-- get http://localhost:8700/linkservice/books
-- get http://localhost:8700/linkservice/books/{isbn}
+- get http://localhost:8700/linkservice/photos (API interna acessa API externa e pega lista de fotos existentes)
+- get http://localhost:8700/linkservice/photos/{id} (API interna acessa API externa e pega 1 unico item)
+- get http://localhost:8700/linkservice/books (API interna acessa outra API interna e pega lista de livros existentes)
+- get http://localhost:8700/linkservice/books/{isbn} (API interna acessa outra API interna e pega 1 unico item)
 ### 09.2 Execução do Bookservice através do Gateway
-- get http://localhost:8700/bookservice/books
-- get http://localhost:8700/bookservice/books/{isbn}
-- put http://localhost:8700/bookservice/books -> postman
-- delete http://localhost:8700/bookservice/books/{isbn} -> postman 
-- post http://localhost:8700/bookservice/books -> postman
+- get http://localhost:8700/bookservice/books (API interna pega lista de livros existentes)
+- get http://localhost:8700/bookservice/books/{isbn} (API interna pega 1 unico item)
+- put http://localhost:8700/bookservice/books -> postman ()
+- delete http://localhost:8700/bookservice/books/{isbn} -> postman (API interna)
+- post http://localhost:8700/bookservice/books -> postman ()
 - Exemplo JSON: {"isbn": 123456789,"author": "Ulrich Max","category": "TECNOLOGY","edition": 2,"title": "The Greatest IT Code","type": "PAPER"}
