@@ -38,7 +38,7 @@ Implementar um ambiente de microsserviços que possua as seguintes característi
 ## Como Testar
 - Tenha uma conta no DockerHub e instale o Docker na sua estação
 - Baixe o arquivo docker-compose.yml do projeto para seu computador
-- Execute o comando "docker-compose up" no diretorio que o arquivo foi salvo (Vai levar alguns minutos para baixar as dock-images e executá-las)
+- Execute o comando "docker-compose up" no diretorio que o arquivo foi salvo (levará vários minutos para baixar as dock-images e executá-las)
 - As seguintes portas devem estar livres no seu computador: 3306, 5672, 8000, 8100, 8700, 8765, 9411, 15672
 (se usar windows pode ver se está em uso executando "netstat -aon | findstr :80" onde 80 é a porta procurada, Observe o PID [id do processo]. Se deseja liberar a porta, vá para o gerenciador de tarefas, classifique por pid e feche esse processo) 
 - ...
