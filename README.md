@@ -55,14 +55,23 @@ Implementar um ambiente de microsserviços que possua as seguintes característi
 - 08 Linkservice (http://localhost:8100/actuator)
 - 09 API Gateway (http://localhost:8700/actuator)
 ### 09.1 Execução do Linkservice através do Gateway
-- get http://localhost:8700/linkservice/photos (API interna acessa API externa e pega lista de fotos existentes)
-- get http://localhost:8700/linkservice/photos/{id} (API interna acessa API externa e pega 1 unico item)
-- get http://localhost:8700/linkservice/books (API interna acessa outra API interna e pega lista de livros existentes)
-- get http://localhost:8700/linkservice/books/{isbn} (API interna acessa outra API interna e pega 1 unico item)
+- get http://localhost:8700/linkservice/photos 
+- (API interna acessa API externa e pega lista de fotos existentes)
+- get http://localhost:8700/linkservice/photos/{id} 
+- (API interna acessa API externa e pega 1 unico item)
+- get http://localhost:8700/linkservice/books 
+- (API interna acessa outra API interna e pega lista de livros existentes)
+- get http://localhost:8700/linkservice/books/{isbn} 
+- (API interna acessa outra API interna e pega 1 unico item)
 ### 09.2 Execução do Bookservice através do Gateway
-- get http://localhost:8700/bookservice/books (API interna pega lista de livros existentes)
-- get http://localhost:8700/bookservice/books/{isbn} (API interna pega 1 unico item)
-- put http://localhost:8700/bookservice/books -> postman ()
-- delete http://localhost:8700/bookservice/books/{isbn} -> postman (API interna)
-- post http://localhost:8700/bookservice/books -> postman ()
+- get http://localhost:8700/bookservice/books 
+- (API interna pega lista de livros existentes)
+- get http://localhost:8700/bookservice/books/{isbn} 
+- (API interna pega 1 unico item)
+- put http://localhost:8700/bookservice/books -> postman 
+- (API interna salva alterações no DB, execute via postman)
+- delete http://localhost:8700/bookservice/books/{isbn} -> postman 
+- (API interna exclui item no DB, execute via postman)
+- post http://localhost:8700/bookservice/books -> postman
+- (API interna inclui novo item no DB, execute via postman)
 - Exemplo JSON: {"isbn": 123456789,"author": "Ulrich Max","category": "TECNOLOGY","edition": 2,"title": "The Greatest IT Code","type": "PAPER"}
