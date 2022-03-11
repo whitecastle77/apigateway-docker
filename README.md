@@ -54,15 +54,15 @@ Implementar um ambiente de microsserviços que possua as seguintes característi
 - 07 Bookservice (http://localhost:8000/actuator)
 - 08 Linkservice (http://localhost:8100/actuator)
 - 09 API Gateway (http://localhost:8700/actuator)
-> 09.1 Execução do Linkservice através do Gateway
-- get /photos
-- get /photos/{id}
-- get /books
-- get /books/{isbn}
-> 09.2 Execução do Bookservice através do Gateway
-- get /books
-- get /books/{isbn}
-- put /books -> postman
-- delete /books/{isbn} -> postman 
-- post /books -> postman
-{"isbn": 123456789,"author": "Ulrich Max","category": "TECNOLOGY","edition": 2,"title": "The Greatest IT Code","type": "PAPER"}
+### 09.1 Execução do Linkservice através do Gateway
+- get http://localhost:8700/linkservice/photos
+- get http://localhost:8700/linkservice/photos/{id}
+- get http://localhost:8700/linkservice/books
+- get http://localhost:8700/linkservice/books/{isbn}
+### 09.2 Execução do Bookservice através do Gateway
+- get http://localhost:8700/bookservice/books
+- get http://localhost:8700/bookservice/books/{isbn}
+- put http://localhost:8700/bookservice/books -> postman
+- delete http://localhost:8700/bookservice/books/{isbn} -> postman 
+- post http://localhost:8700/bookservice/books -> postman
+- Exemplo JSON: {"isbn": 123456789,"author": "Ulrich Max","category": "TECNOLOGY","edition": 2,"title": "The Greatest IT Code","type": "PAPER"}
