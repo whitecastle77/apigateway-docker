@@ -45,33 +45,32 @@ Implementar um ambiente de microsserviços que possua as seguintes característi
 
 ## Execução 
 - Após o Docker Compose finalizar seu processo iremos validar a execução dos serviços e testar as APIs LinkService e BookService
-- 01 MySQL
-- 02 Zipkin (http://localhost:9411/)
-- 03 RabbitMQ (http://localhost:15672/) Login: guest Pass: guest
-- 04 Eureka Naming Server (http://localhost:8765/)
-- 05 SpringDoc (http://localhost:8000/v3/api-docs) e (http://localhost:8100/v3/api-docs)
-- 06 Swagger (http://localhost:8000/swagger-ui.html) e (http://localhost:8100/swagger-ui.html)
-- 07 Bookservice (http://localhost:8000/actuator)
-- 08 Linkservice (http://localhost:8100/actuator)
-- 09 API Gateway (http://localhost:8700/actuator)
+- MySQL
+- Zipkin http://localhost:9411/
+- RabbitMQ http://localhost:15672/ Login: guest Pass: guest
+- Eureka Naming Server http://localhost:8765/
+- SpringDoc http://localhost:8000/v3/api-docs e http://localhost:8100/v3/api-docs
+- Swagger http://localhost:8000/swagger-ui.html e http://localhost:8100/swagger-ui.html
+- Bookservice http://localhost:8000/actuator
+- Linkservice http://localhost:8100/actuator
+- API Gateway http://localhost:8700/actuator
 ### 09.1 Execução do Linkservice através do Gateway
 - get http://localhost:8700/linkservice/photos 
-- (API interna acessa API externa e pega lista de fotos existentes)
+> API interna acessa API externa e pega lista de fotos existentes
 - get http://localhost:8700/linkservice/photos/{id} 
-- (API interna acessa API externa e pega 1 unico item)
+> API interna acessa API externa e pega 1 unico item
 - get http://localhost:8700/linkservice/books 
-- (API interna acessa outra API interna e pega lista de livros existentes)
+> API interna acessa outra API interna e pega lista de livros existentes
 - get http://localhost:8700/linkservice/books/{isbn} 
-- (API interna acessa outra API interna e pega 1 unico item)
+> API interna acessa outra API interna e pega 1 unico item
 ### 09.2 Execução do Bookservice através do Gateway
 - get http://localhost:8700/bookservice/books 
-- (API interna pega lista de livros existentes)
+> API interna pega lista de livros existentes
 - get http://localhost:8700/bookservice/books/{isbn} 
-- (API interna pega 1 unico item)
+> API interna pega 1 unico item
 - put http://localhost:8700/bookservice/books -> postman 
-- (API interna salva alterações no DB, execute via postman)
+> API interna salva alterações no DB, execute via postman
 - delete http://localhost:8700/bookservice/books/{isbn} -> postman 
-- (API interna exclui item no DB, execute via postman)
+> API interna exclui item no DB, execute via postman
 - post http://localhost:8700/bookservice/books -> postman
-- (API interna inclui novo item no DB, execute via postman)
-- Exemplo JSON: {"isbn": 123456789,"author": "Ulrich Max","category": "TECNOLOGY","edition": 2,"title": "The Greatest IT Code","type": "PAPER"}
+> API interna inclui novo item no DB, execute via postman. Exemplo JSON: {"isbn": 123456789,"author": "Ulrich Max","category": "TECNOLOGY","edition": 2,"title": "The Greatest IT Code","type": "PAPER"}
